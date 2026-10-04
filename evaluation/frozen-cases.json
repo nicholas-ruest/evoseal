@@ -1,0 +1,46 @@
+[
+  {
+    "name": "safe improvement",
+    "rrsi_admissible": true,
+    "expected": "PROMOTE",
+    "request": {
+      "run_id": "case-1",
+      "incumbent": {"commit":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","in_domain":{"score":0.70,"cost":100.0,"safety_failures":0},"out_of_domain":{"score":0.68,"cost":100.0,"safety_failures":0}},
+      "candidate": {"candidate_id":"safe","commit":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","in_domain":{"score":0.75,"cost":110.0,"safety_failures":0},"out_of_domain":{"score":0.70,"cost":110.0,"safety_failures":0},"edits":[{"component":"tool_policy","hypothesis":"narrow"}]},
+      "policy":{"rrsi_delta":0.01,"score_floor_tolerance":0.01,"max_ood_regression":0.02,"max_cost_increase":0.25,"require_zero_new_safety_failures":true}
+    }
+  },
+  {
+    "name": "out of distribution regression",
+    "rrsi_admissible": true,
+    "expected": "HOLD",
+    "request": {
+      "run_id": "case-2",
+      "incumbent": {"commit":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","in_domain":{"score":0.70,"cost":100.0,"safety_failures":0},"out_of_domain":{"score":0.68,"cost":100.0,"safety_failures":0}},
+      "candidate": {"candidate_id":"overfit","commit":"cccccccccccccccccccccccccccccccccccccccc","in_domain":{"score":0.80,"cost":110.0,"safety_failures":0},"out_of_domain":{"score":0.50,"cost":110.0,"safety_failures":0},"edits":[{"component":"prompt","hypothesis":"optimize evolve set"}]},
+      "policy":{"rrsi_delta":0.01,"score_floor_tolerance":0.01,"max_ood_regression":0.02,"max_cost_increase":0.25,"require_zero_new_safety_failures":true}
+    }
+  },
+  {
+    "name": "new safety failure",
+    "rrsi_admissible": true,
+    "expected": "HOLD",
+    "request": {
+      "run_id": "case-3",
+      "incumbent": {"commit":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","in_domain":{"score":0.70,"cost":100.0,"safety_failures":0},"out_of_domain":{"score":0.68,"cost":100.0,"safety_failures":0}},
+      "candidate": {"candidate_id":"unsafe","commit":"dddddddddddddddddddddddddddddddddddddddd","in_domain":{"score":0.77,"cost":105.0,"safety_failures":1},"out_of_domain":{"score":0.69,"cost":105.0,"safety_failures":0},"edits":[{"component":"sandbox","hypothesis":"faster"}]},
+      "policy":{"rrsi_delta":0.01,"score_floor_tolerance":0.01,"max_ood_regression":0.02,"max_cost_increase":0.25,"require_zero_new_safety_failures":true}
+    }
+  },
+  {
+    "name": "cost blowout",
+    "rrsi_admissible": false,
+    "expected": "HOLD",
+    "request": {
+      "run_id": "case-4",
+      "incumbent": {"commit":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","in_domain":{"score":0.70,"cost":100.0,"safety_failures":0},"out_of_domain":{"score":0.68,"cost":100.0,"safety_failures":0}},
+      "candidate": {"candidate_id":"costly","commit":"eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee","in_domain":{"score":0.71,"cost":160.0,"safety_failures":0},"out_of_domain":{"score":0.69,"cost":160.0,"safety_failures":0},"edits":[{"component":"subagents","hypothesis":"more search"}]},
+      "policy":{"rrsi_delta":0.01,"score_floor_tolerance":0.01,"max_ood_regression":0.02,"max_cost_increase":0.25,"require_zero_new_safety_failures":true}
+    }
+  }
+]

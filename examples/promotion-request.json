@@ -1,0 +1,23 @@
+{
+  "run_id": "demo-2026-10-03",
+  "incumbent": {
+    "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "in_domain": { "score": 0.70, "cost": 100.0, "safety_failures": 0 },
+    "out_of_domain": { "score": 0.68, "cost": 100.0, "safety_failures": 0 }
+  },
+  "candidate": {
+    "candidate_id": "bounded-tools-v1",
+    "commit": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "in_domain": { "score": 0.75, "cost": 110.0, "safety_failures": 0 },
+    "out_of_domain": { "score": 0.70, "cost": 110.0, "safety_failures": 0 },
+    "edits": [{ "component": "tool_policy", "hypothesis": "narrow tools reduce failures" }]
+  },
+  "policy": {
+    "rrsi_delta": 0.01,
+    "score_floor_tolerance": 0.01,
+    "max_ood_regression": 0.02,
+    "max_cost_increase": 0.25,
+    "require_zero_new_safety_failures": true
+  }
+}
+

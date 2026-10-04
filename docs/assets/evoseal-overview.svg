@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">EvoSeal architecture</title>
+  <desc id="desc">Candidate evidence flows through RRSI and a Rust gate, then to RuVector history and an RVF witness before an advisory decision.</desc>
+  <defs><style>.bg{fill:#0f172a}.box{fill:#1e293b;stroke:#38bdf8;stroke-width:3}.accent{fill:#0f766e;stroke:#5eead4;stroke-width:3}.t{fill:#f8fafc;font:600 24px sans-serif}.s{fill:#cbd5e1;font:18px sans-serif}.a{stroke:#94a3b8;stroke-width:5;marker-end:url(#m)} </style><marker id="m" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker></defs>
+  <rect class="bg" width="1200" height="520" rx="28"/>
+  <rect class="box" x="55" y="190" width="220" height="130" rx="18"/><text class="t" x="90" y="240">Candidate</text><text class="s" x="90" y="278">commit + metrics</text>
+  <rect class="box" x="355" y="70" width="220" height="130" rx="18"/><text class="t" x="408" y="120">Google RRSI</text><text class="s" x="400" y="158">Algorithm 2</text>
+  <rect class="accent" x="355" y="300" width="220" height="130" rx="18"/><text class="t" x="408" y="350">Rust gate</text><text class="s" x="390" y="388">OOD · cost · safety</text>
+  <rect class="box" x="675" y="70" width="220" height="130" rx="18"/><text class="t" x="728" y="120">RuVector</text><text class="s" x="715" y="158">history + read-back</text>
+  <rect class="box" x="675" y="300" width="220" height="130" rx="18"/><text class="t" x="750" y="350">RVF</text><text class="s" x="715" y="388">witness verify</text>
+  <rect class="accent" x="980" y="190" width="170" height="130" rx="18"/><text class="t" x="1015" y="240">Report</text><text class="s" x="1007" y="278">authority: none</text>
+  <path class="a" d="M275 230 C320 230 320 135 355 135"/><path class="a" d="M275 280 C320 280 320 365 355 365"/><path class="a" d="M575 135 C630 135 630 135 675 135"/><path class="a" d="M575 365 C630 365 630 365 675 365"/><path class="a" d="M895 135 C950 135 950 220 980 230"/><path class="a" d="M895 365 C950 365 950 285 980 280"/>
+</svg>
+

@@ -1,0 +1,20 @@
+[package]
+name = "evoseal-adapter-rrsi"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+evoseal-application = { path = "../evoseal-application" }
+evoseal-domain = { path = "../evoseal-domain" }
+serde_json.workspace = true
+wait-timeout.workspace = true
+
+[dev-dependencies]
+tempfile.workspace = true
+
+[lints]
+workspace = true
+

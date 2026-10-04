@@ -1,0 +1,24 @@
+[package]
+name = "evoseal-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+
+[[bin]]
+name = "evoseal"
+path = "src/main.rs"
+
+[dependencies]
+anyhow.workspace = true
+clap.workspace = true
+evoseal-adapter-rrsi = { path = "../evoseal-adapter-rrsi" }
+evoseal-adapter-ruvnet = { path = "../evoseal-adapter-ruvnet" }
+evoseal-application = { path = "../evoseal-application" }
+evoseal-domain = { path = "../evoseal-domain" }
+serde_json.workspace = true
+
+[lints]
+workspace = true
+
