@@ -1,0 +1,20 @@
+{
+  "status": "PARTIAL_FAILURE",
+  "failures": [
+    "gist:research",
+    "gist:build"
+  ],
+  "caveat": "Receipt consistency is not independent proof of live execution or publication.",
+  "source": {
+    "repository": "nicholas-ruest/ruvnet-dream-machine",
+    "commit": "7b81d5ea2561d618b9142cc05bf850e9fcd1380f",
+    "script": "scripts/factory-gate.mjs",
+    "scriptSha256": "24c8b3c345f2ac2297427b5f9ac014ea02c8717274bf4cdf65b5c1e4030c3354"
+  },
+  "execution": {
+    "machine": "8ee959f7363638",
+    "completionVerified": true,
+    "exitCode": 1,
+    "date": "2026-10-03"
+  }
+}
