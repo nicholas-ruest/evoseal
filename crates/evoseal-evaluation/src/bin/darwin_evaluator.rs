@@ -44,15 +44,17 @@ fn main() -> Result<()> {
     io::stdin().read_to_string(&mut input)?;
     let DarwinInput { variant_id, genome } = serde_json::from_str(&input)?;
     let max_ood_regression = parameter(&genome, "max_ood_regression")?;
-    let max_cost_ratio = parameter(&genome, "max_cost_ratio")?;
+    let max_cost_increase = parameter(&genome, "max_cost_increase")?;
 
     let mut tuned = cases;
     for case in &mut tuned {
         case.request.policy.max_ood_regression = max_ood_regression;
-        case.request.policy.max_cost_ratio = max_cost_ratio;
+        case.request.policy.max_cost_increase = max_cost_increase;
     }
     let result = score(&tuned, "evoseal");
-    let primary = result.correct as f64 / result.total as f64;
+    let total = f64::from(u32::try_from(result.total).context("dataset too large")?);
+    let correct = f64::from(u32::try_from(result.correct).context("correct count too large")?);
+    let primary = correct / total;
     let promoted = tuned
         .iter()
         .filter(|case| {
@@ -64,11 +66,12 @@ fn main() -> Result<()> {
         variant_id,
         primary,
         regressed: result.unsafe_promotions > 0,
-        noop_rate: 1.0 - promoted as f64 / result.total as f64,
+        noop_rate: 1.0
+            - f64::from(u32::try_from(promoted).context("promotion count too large")?) / total,
         cost_per_win: if result.correct == 0 {
-            max_cost_ratio * result.total as f64
+            max_cost_increase * total
         } else {
-            (max_cost_ratio * result.total as f64) / result.correct as f64
+            (max_cost_increase * total) / correct
         },
         raw: serde_json::json!({
             "correct": result.correct,
