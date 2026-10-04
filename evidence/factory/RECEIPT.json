@@ -1,0 +1,232 @@
+{
+  "schemaVersion": "dream.factory.v1",
+  "date": "2026-10-03",
+  "coreMemory": {
+    "commit": "515c6445e28e75d33ebe75f34ea3e8f3a31a2361",
+    "files": {
+      "AGENTS.md": "4afe6f9008076140486d2a1e5424ddc6e40a0671",
+      "CLAUDE.md": "0178167276c981ff0ba503e2e564eee8d347e3f7",
+      "docs/architecture-overview.md": "8ba7f76674e59555dbcd5f971554884c54085944",
+      "docs/adr/0002-storage-engine-anti-corruption-adapter.md": "9a8bdfe08dd41abc4402ab46a4ad359356815b6e",
+      "docs/adr/0008-benchmark-promotion.md": "15e782267153e3d4251bf7fc196763de83b9669b",
+      "docs/adr/0017-trust-root-witness.md": "a550f0a481ca0804ceb6a4a442653cc0179dcda7",
+      "docs/ddd/bounded-context-map.md": "ddda3371b416dc7394b15957451fc3a829a9fe21",
+      "docs/ddd/governance.md": "2c1e98630374c966699c5a808305daa6718b4cfc"
+    },
+    "appliedDecisions": [
+      "Immutable source-bound evidence",
+      "Single writer on isolated review branch",
+      "Ruflo is coordination, not implementation",
+      "Evaluator output is advisory and human-gated",
+      "Typed fail-loud ports",
+      "Append-only auditable RuVector/RVF evidence"
+    ]
+  },
+  "research": {
+    "frontier": [
+      {
+        "organization": "Google Research",
+        "date": "2026-09-21",
+        "primarySource": true,
+        "url": "https://arxiv.org/abs/2609.24972"
+      },
+      {
+        "organization": "HarnessDev collaboration",
+        "date": "2026-09-01",
+        "primarySource": true,
+        "url": "https://arxiv.org/abs/2609.01437"
+      },
+      {
+        "organization": "UIUC and Salesforce Research",
+        "date": "2026-09-29",
+        "primarySource": true,
+        "url": "https://arxiv.org/abs/2609.38143"
+      }
+    ],
+    "enterprise": [
+      {
+        "organization": "Google Research",
+        "date": "2026-09-23",
+        "primarySource": true,
+        "url": "https://github.com/google-research/rrsi/commit/be50316e1db05914068a973f322770ef08ed7ba1",
+        "commit": "be50316e1db05914068a973f322770ef08ed7ba1",
+        "license": "Apache-2.0",
+        "codeInspected": true
+      },
+      {
+        "organization": "Microsoft",
+        "date": "2026-10-03",
+        "primarySource": true,
+        "url": "https://github.com/microsoft/agent-governance-toolkit/commit/c3e8229dfb19c697468cfb790495d7174ef8bc45",
+        "commit": "c3e8229dfb19c697468cfb790495d7174ef8bc45",
+        "license": "MIT",
+        "codeInspected": true
+      },
+      {
+        "organization": "NVIDIA",
+        "date": "2026-09-23",
+        "primarySource": true,
+        "url": "https://github.com/NVIDIA/NeMo-Agent-Toolkit/commit/c7e1162a1c7ff18bbd797e090a56cad97c281c92",
+        "commit": "c7e1162a1c7ff18bbd797e090a56cad97c281c92",
+        "license": "Apache-2.0",
+        "codeInspected": true
+      },
+      {
+        "organization": "AWS",
+        "date": "2026-10-03",
+        "primarySource": true,
+        "url": "https://github.com/awslabs/cli-agent-orchestrator/commit/0caec2c9fe13b44f43d1bb097e41a4264aca5d33",
+        "commit": "0caec2c9fe13b44f43d1bb097e41a4264aca5d33",
+        "license": "Apache-2.0",
+        "codeInspected": true
+      }
+    ]
+  },
+  "project": {
+    "kind": "new-project",
+    "thesis": "EvoSeal is an evidence-bound promotion firewall that blocks self-promotion of evolving agent harnesses without independent OOD, safety, cost, persistence, witness and human approval gates.",
+    "repository": "https://github.com/nicholas-ruest/evoseal",
+    "commit": "66ac3809fceb997210bc042b3cf79000cbbcb849",
+    "readBackCommit": "66ac3809fceb997210bc042b3cf79000cbbcb849",
+    "ingredients": [
+      {
+        "component": "RuVector core 2.3.1",
+        "owner": "ruvnet",
+        "commit": "4f9490ffb9e13ebb761ba7e3f53275938477c446",
+        "license": "MIT",
+        "enterprise": false,
+        "integrationExecuted": true
+      },
+      {
+        "component": "RVF crypto 0.2.0",
+        "owner": "ruvnet",
+        "commit": "4f9490ffb9e13ebb761ba7e3f53275938477c446",
+        "license": "MIT OR Apache-2.0",
+        "enterprise": false,
+        "integrationExecuted": true
+      },
+      {
+        "component": "Google RRSI",
+        "owner": "google-research",
+        "commit": "be50316e1db05914068a973f322770ef08ed7ba1",
+        "license": "Apache-2.0",
+        "enterprise": true,
+        "integrationExecuted": true
+      },
+      {
+        "component": "MetaHarness Darwin and Flywheel",
+        "owner": "ruvnet",
+        "commit": "9ce8b8dd89045c3b9a1f809ae58f3589029db4a4",
+        "license": "MIT",
+        "enterprise": false,
+        "integrationExecuted": true
+      }
+    ]
+  },
+  "commands": {
+    "fmt": {
+      "executed": true,
+      "exitCode": 0,
+      "commit": "66ac3809fceb997210bc042b3cf79000cbbcb849"
+    },
+    "clippy": {
+      "executed": true,
+      "exitCode": 0,
+      "commit": "66ac3809fceb997210bc042b3cf79000cbbcb849"
+    },
+    "test": {
+      "executed": true,
+      "exitCode": 0,
+      "commit": "66ac3809fceb997210bc042b3cf79000cbbcb849"
+    },
+    "security": {
+      "executed": true,
+      "exitCode": 0,
+      "commit": "66ac3809fceb997210bc042b3cf79000cbbcb849"
+    },
+    "integration": {
+      "executed": true,
+      "exitCode": 0,
+      "commit": "66ac3809fceb997210bc042b3cf79000cbbcb849"
+    },
+    "benchmark": {
+      "executed": true,
+      "exitCode": 0,
+      "commit": "66ac3809fceb997210bc042b3cf79000cbbcb849"
+    }
+  },
+  "evaluators": {
+    "metaharness": {
+      "executed": true,
+      "exitCode": 0,
+      "upstreamCommit": "9ce8b8dd89045c3b9a1f809ae58f3589029db4a4",
+      "mock": false
+    },
+    "darwin": {
+      "executed": true,
+      "exitCode": 0,
+      "upstreamCommit": "9ce8b8dd89045c3b9a1f809ae58f3589029db4a4",
+      "mock": false
+    },
+    "flywheel": {
+      "executed": true,
+      "exitCode": 0,
+      "upstreamCommit": "9ce8b8dd89045c3b9a1f809ae58f3589029db4a4",
+      "mock": false
+    }
+  },
+  "gists": {
+    "research": null,
+    "build": null
+  },
+  "evidence": [
+    {
+      "path": "evidence/raw/final-fmt.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/raw/final-clippy.log",
+      "sha256": "61f1877229b6f438292326bbaf03bfe6c9536b816587c8990978c83d86ab0021"
+    },
+    {
+      "path": "evidence/raw/final-test.log",
+      "sha256": "58d8ca41e13c11c5f6c0382797c48c9d676c4f8d24c9cbc1def315bf52abce9e"
+    },
+    {
+      "path": "evidence/raw/final-deny.log",
+      "sha256": "9c685ea45770257a05c677eb8b926190cdc438deac9f230441ab7d4f4479ea43"
+    },
+    {
+      "path": "evidence/raw/final-rrsi.log",
+      "sha256": "0c7539fd57bca5a4f05b97f89c0bfc5051f28b1eaee4f9865c329479e9e376b6"
+    },
+    {
+      "path": "evidence/benchmark.json",
+      "sha256": "299617e131fe342ac3bae8c13992efcb5c4f2461bee0b9fa54678b99228033aa"
+    },
+    {
+      "path": "evidence/cli-report.json",
+      "sha256": "bdfb1debdb652e10b89bb874f84c71bef04db35a8872d22306a9b9437af4deea"
+    },
+    {
+      "path": "evidence/flywheel-evaluation.json",
+      "sha256": "d6f826ffbff58315f565086dd54d44ebdea5caa71375aa27ce07958d786ff9f0"
+    },
+    {
+      "path": "evidence/flywheel-replay.json",
+      "sha256": "68b91d63feffcc0f150020190ac757b63921fcbe5af2c4aab04974d993585bdb"
+    },
+    {
+      "path": "evidence/raw/darwin-evaluation.log",
+      "sha256": "eaed5db9730e97f6636b26c82e535c0003250eab69d10ead8e4e332f5c1e3cb3"
+    },
+    {
+      "path": ".metaharness-numeric/archive.json",
+      "sha256": "cb40a005496fd701f8c486d3eead90a445039915ac84df12900e253a94e1023e"
+    },
+    {
+      "path": ".metaharness-numeric/reports/winner.json",
+      "sha256": "22ec74ee2b64969fe38ab1d41c17263fcde4e34d3234fb6d04a54791b3d32ae7"
+    }
+  ]
+}
