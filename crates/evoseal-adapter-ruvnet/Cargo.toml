@@ -7,8 +7,8 @@ repository.workspace = true
 rust-version.workspace = true
 
 [dependencies]
-evoseal-application = { path = "../evoseal-application" }
-evoseal-domain = { path = "../evoseal-domain" }
+evoseal-application = { version = "=0.1.0", path = "../evoseal-application" }
+evoseal-domain = { version = "=0.1.0", path = "../evoseal-domain" }
 hex.workspace = true
 ruvector-core.workspace = true
 rvf-crypto.workspace = true

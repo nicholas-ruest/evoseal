@@ -13,10 +13,10 @@ path = "src/main.rs"
 [dependencies]
 anyhow.workspace = true
 clap.workspace = true
-evoseal-adapter-rrsi = { path = "../evoseal-adapter-rrsi" }
-evoseal-adapter-ruvnet = { path = "../evoseal-adapter-ruvnet" }
-evoseal-application = { path = "../evoseal-application" }
-evoseal-domain = { path = "../evoseal-domain" }
+evoseal-adapter-rrsi = { version = "=0.1.0", path = "../evoseal-adapter-rrsi" }
+evoseal-adapter-ruvnet = { version = "=0.1.0", path = "../evoseal-adapter-ruvnet" }
+evoseal-application = { version = "=0.1.0", path = "../evoseal-application" }
+evoseal-domain = { version = "=0.1.0", path = "../evoseal-domain" }
 serde_json.workspace = true
 
 [lints]

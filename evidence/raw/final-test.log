@@ -1,0 +1,68 @@
+   Compiling anndists v0.1.5
+   Compiling evoseal-evaluation v0.1.0 (/home/ruv/.local/share/dream-machine/runs/2026-10-03-evoseal-v1/repo/crates/evoseal-evaluation)
+   Compiling hnsw_rs v0.3.4
+   Compiling ruvector-core v2.3.1
+   Compiling evoseal-adapter-ruvnet v0.1.0 (/home/ruv/.local/share/dream-machine/runs/2026-10-03-evoseal-v1/repo/crates/evoseal-adapter-ruvnet)
+   Compiling evoseal-cli v0.1.0 (/home/ruv/.local/share/dream-machine/runs/2026-10-03-evoseal-v1/repo/crates/evoseal-cli)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 9.09s
+     Running unittests src/lib.rs (target/debug/deps/evoseal_adapter_rrsi-30219046973fb48a)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/upstream.rs (target/debug/deps/upstream-93feb93ea9697415)
+
+running 1 test
+test invokes_google_rrsi_algorithm_two ... ignored, requires pinned Google RRSI checkout; run with RRSI_SOURCE
+
+test result: ok. 0 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/evoseal_adapter_ruvnet-299fe0085f5e1fc5)
+
+running 2 tests
+test tests::real_rvf_chain_verifies_and_tampering_fails ... ok
+test tests::real_ruvector_write_is_read_back ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.25s
+
+     Running unittests src/lib.rs (target/debug/deps/evoseal_application-21fd87b6812f6bd5)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (target/debug/deps/evoseal-510b546cdca3ea47)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/evoseal_domain-d4037fd0a1551fa4)
+
+running 3 tests
+test tests::ood_regression_holds_even_when_rrsi_accepts ... ok
+test tests::safe_candidate_promotes ... ok
+test tests::safety_regression_holds ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/evoseal_evaluation-4947c59b919f7075)
+
+running 1 test
+test tests::frozen_dataset_has_expected_strategy_ordering ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/darwin_evaluator.rs (target/debug/deps/darwin_evaluator-a6902b1c8c345d55)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (target/debug/deps/evoseal_eval-0eeecbcd160dbb11)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

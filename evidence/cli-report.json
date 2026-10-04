@@ -1,0 +1,21 @@
+{
+  "run_id": "demo-2026-10-03",
+  "candidate_id": "bounded-tools-v1",
+  "status": "PROMOTE",
+  "reasons": [],
+  "rrsi": {
+    "admissible": true,
+    "reason": "admissible: gain +0.0500 > delta 0.0100; cost change +0.100 <= budget 2.100 (beta0 0.1 + beta1 40.0 * dS)",
+    "edit_budget": 4
+  },
+  "ledger": {
+    "history_id": "demo-2026-10-03:bounded-tools-v1",
+    "nearest_prior_ids": []
+  },
+  "witness": {
+    "root_hex": "b8d4cad25d9941c24f4c36de84e9ba150bb90b16848b37da73c6b142ab22f295",
+    "entries": 2,
+    "verified": true
+  },
+  "authority": "none"
+}

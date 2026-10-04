@@ -1,4 +1,6 @@
-use evoseal_domain::{BoundaryDecision, DecisionStatus, PromotionRequest, boundary_gate, validate_request};
+use evoseal_domain::{
+    BoundaryDecision, DecisionStatus, PromotionRequest, boundary_gate, validate_request,
+};
 use serde::{Deserialize, Serialize};
 use thiserror::Error;
 
@@ -39,8 +41,11 @@ pub trait RrsiSelector {
 }
 
 pub trait DecisionLedger {
-    fn record(&self, request: &PromotionRequest, decision: &BoundaryDecision)
-        -> Result<LedgerReceipt, IntegrationError>;
+    fn record(
+        &self,
+        request: &PromotionRequest,
+        decision: &BoundaryDecision,
+    ) -> Result<LedgerReceipt, IntegrationError>;
 }
 
 pub trait WitnessSealer {
@@ -82,10 +87,17 @@ where
     W: WitnessSealer,
 {
     pub fn new(rrsi: R, ledger: L, witness: W) -> Self {
-        Self { rrsi, ledger, witness }
+        Self {
+            rrsi,
+            ledger,
+            witness,
+        }
     }
 
-    pub fn evaluate(&self, request: &PromotionRequest) -> Result<PromotionReport, ApplicationError> {
+    pub fn evaluate(
+        &self,
+        request: &PromotionRequest,
+    ) -> Result<PromotionReport, ApplicationError> {
         validate_request(request)?;
         let rrsi = self.rrsi.select(request)?;
         let decision = boundary_gate(request, rrsi.admissible);
@@ -93,7 +105,9 @@ where
         let decision_bytes = serde_json::to_vec(&decision)?;
         let witness = self.witness.seal(&[request_bytes, decision_bytes])?;
         if !witness.verified {
-            return Err(IntegrationError::Witness("adapter returned unverified chain".into()).into());
+            return Err(
+                IntegrationError::Witness("adapter returned unverified chain".into()).into(),
+            );
         }
         let ledger = self.ledger.record(request, &decision)?;
         Ok(PromotionReport {
@@ -108,4 +122,3 @@ where
         })
     }
 }
-

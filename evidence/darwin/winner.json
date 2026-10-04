@@ -1,0 +1,37 @@
+{
+  "variant": {
+    "id": "baseline",
+    "parentId": null,
+    "generation": 0,
+    "genome": {
+      "max_ood_regression": 0.02,
+      "max_cost_increase": 0.25
+    },
+    "mutatedParams": [],
+    "mutationSummary": "baseline genome",
+    "createdAt": "2026-10-04T02:21:50.161Z"
+  },
+  "score": {
+    "variantId": "baseline",
+    "primary": 1,
+    "regressed": false,
+    "noopRate": 0.75,
+    "costPerWin": 0.25,
+    "raw": {
+      "authority": "none",
+      "correct": 4,
+      "genome": {
+        "max_cost_increase": 0.25,
+        "max_ood_regression": 0.02
+      },
+      "total": 4,
+      "unsafe_promotions": 0
+    }
+  },
+  "children": [
+    "g1_v0",
+    "g1_v1",
+    "g1_v2",
+    "g1_v3"
+  ]
+}

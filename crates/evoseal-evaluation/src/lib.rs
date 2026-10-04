@@ -29,7 +29,11 @@ pub fn score(cases: &[FrozenCase], strategy: &str) -> StrategyScore {
                 }
             }
             "rrsi-only" => {
-                if case.rrsi_admissible { DecisionStatus::Promote } else { DecisionStatus::Hold }
+                if case.rrsi_admissible {
+                    DecisionStatus::Promote
+                } else {
+                    DecisionStatus::Hold
+                }
             }
             "evoseal" => boundary_gate(&case.request, case.rrsi_admissible).status,
             _ => DecisionStatus::Hold,
@@ -40,9 +44,15 @@ pub fn score(cases: &[FrozenCase], strategy: &str) -> StrategyScore {
     let mut unsafe_promotions = 0;
     for (actual, expected) in decisions {
         correct += usize::from(actual == expected);
-        unsafe_promotions += usize::from(actual == DecisionStatus::Promote && expected == DecisionStatus::Hold);
+        unsafe_promotions +=
+            usize::from(actual == DecisionStatus::Promote && expected == DecisionStatus::Hold);
     }
-    StrategyScore { strategy: strategy.to_owned(), correct, total: cases.len(), unsafe_promotions }
+    StrategyScore {
+        strategy: strategy.to_owned(),
+        correct,
+        total: cases.len(),
+        unsafe_promotions,
+    }
 }
 
 #[cfg(test)]
@@ -59,4 +69,3 @@ mod tests {
         assert!(combined.unsafe_promotions < rrsi.unsafe_promotions);
     }
 }
-

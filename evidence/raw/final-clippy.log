@@ -1,0 +1,6 @@
+    Checking ruvector-core v2.3.1
+    Checking evoseal-evaluation v0.1.0 (/home/ruv/.local/share/dream-machine/runs/2026-10-03-evoseal-v1/repo/crates/evoseal-evaluation)
+    Checking evoseal-adapter-rrsi v0.1.0 (/home/ruv/.local/share/dream-machine/runs/2026-10-03-evoseal-v1/repo/crates/evoseal-adapter-rrsi)
+    Checking evoseal-adapter-ruvnet v0.1.0 (/home/ruv/.local/share/dream-machine/runs/2026-10-03-evoseal-v1/repo/crates/evoseal-adapter-ruvnet)
+    Checking evoseal-cli v0.1.0 (/home/ruv/.local/share/dream-machine/runs/2026-10-03-evoseal-v1/repo/crates/evoseal-cli)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 3.33s

@@ -1,0 +1,324 @@
+[
+  {
+    "variant": {
+      "id": "baseline",
+      "parentId": null,
+      "generation": 0,
+      "genome": {
+        "max_ood_regression": 0.02,
+        "max_cost_increase": 0.25
+      },
+      "mutatedParams": [],
+      "mutationSummary": "baseline genome",
+      "createdAt": "2026-10-04T02:21:50.161Z"
+    },
+    "score": {
+      "variantId": "baseline",
+      "primary": 1,
+      "regressed": false,
+      "noopRate": 0.75,
+      "costPerWin": 0.25,
+      "raw": {
+        "authority": "none",
+        "correct": 4,
+        "genome": {
+          "max_cost_increase": 0.25,
+          "max_ood_regression": 0.02
+        },
+        "total": 4,
+        "unsafe_promotions": 0
+      }
+    },
+    "children": [
+      "g1_v0",
+      "g1_v1",
+      "g1_v2",
+      "g1_v3"
+    ]
+  },
+  {
+    "variant": {
+      "id": "g1_v0",
+      "parentId": "baseline",
+      "generation": 1,
+      "genome": {
+        "max_ood_regression": 0.04737555270762089,
+        "max_cost_increase": 0.1969152396494097
+      },
+      "mutatedParams": [
+        "max_ood_regression",
+        "max_cost_increase"
+      ],
+      "mutationSummary": "perturbed [max_ood_regression, max_cost_increase]",
+      "createdAt": "2026-10-04T02:21:50.189Z"
+    },
+    "score": {
+      "variantId": "g1_v0",
+      "primary": 1,
+      "regressed": false,
+      "noopRate": 0.75,
+      "costPerWin": 0.1969152396494097,
+      "raw": {
+        "authority": "none",
+        "correct": 4,
+        "genome": {
+          "max_cost_increase": 0.1969152396494097,
+          "max_ood_regression": 0.04737555270762089
+        },
+        "total": 4,
+        "unsafe_promotions": 0
+      }
+    },
+    "children": []
+  },
+  {
+    "variant": {
+      "id": "g1_v1",
+      "parentId": "baseline",
+      "generation": 1,
+      "genome": {
+        "max_ood_regression": 0.03347708129968348,
+        "max_cost_increase": 0.3183822750501398
+      },
+      "mutatedParams": [
+        "max_ood_regression",
+        "max_cost_increase"
+      ],
+      "mutationSummary": "perturbed [max_ood_regression, max_cost_increase]",
+      "createdAt": "2026-10-04T02:21:50.189Z"
+    },
+    "score": {
+      "variantId": "g1_v1",
+      "primary": 1,
+      "regressed": false,
+      "noopRate": 0.75,
+      "costPerWin": 0.3183822750501398,
+      "raw": {
+        "authority": "none",
+        "correct": 4,
+        "genome": {
+          "max_cost_increase": 0.3183822750501398,
+          "max_ood_regression": 0.03347708129968348
+        },
+        "total": 4,
+        "unsafe_promotions": 0
+      }
+    },
+    "children": []
+  },
+  {
+    "variant": {
+      "id": "g1_v2",
+      "parentId": "baseline",
+      "generation": 1,
+      "genome": {
+        "max_ood_regression": 0.04804493155937348,
+        "max_cost_increase": 0.14562883478975341
+      },
+      "mutatedParams": [
+        "max_ood_regression",
+        "max_cost_increase"
+      ],
+      "mutationSummary": "perturbed [max_ood_regression, max_cost_increase]",
+      "createdAt": "2026-10-04T02:21:50.189Z"
+    },
+    "score": {
+      "variantId": "g1_v2",
+      "primary": 1,
+      "regressed": false,
+      "noopRate": 0.75,
+      "costPerWin": 0.1456288347897534,
+      "raw": {
+        "authority": "none",
+        "correct": 4,
+        "genome": {
+          "max_cost_increase": 0.1456288347897534,
+          "max_ood_regression": 0.04804493155937348
+        },
+        "total": 4,
+        "unsafe_promotions": 0
+      }
+    },
+    "children": [
+      "g2_v0",
+      "g2_v1",
+      "g2_v2",
+      "g2_v3"
+    ]
+  },
+  {
+    "variant": {
+      "id": "g1_v3",
+      "parentId": "baseline",
+      "generation": 1,
+      "genome": {
+        "max_ood_regression": 0.04904080449348089,
+        "max_cost_increase": 0.25103116888846133
+      },
+      "mutatedParams": [
+        "max_ood_regression",
+        "max_cost_increase"
+      ],
+      "mutationSummary": "perturbed [max_ood_regression, max_cost_increase]",
+      "createdAt": "2026-10-04T02:21:50.189Z"
+    },
+    "score": {
+      "variantId": "g1_v3",
+      "primary": 1,
+      "regressed": false,
+      "noopRate": 0.75,
+      "costPerWin": 0.25103116888846133,
+      "raw": {
+        "authority": "none",
+        "correct": 4,
+        "genome": {
+          "max_cost_increase": 0.25103116888846133,
+          "max_ood_regression": 0.04904080449348089
+        },
+        "total": 4,
+        "unsafe_promotions": 0
+      }
+    },
+    "children": []
+  },
+  {
+    "variant": {
+      "id": "g2_v0",
+      "parentId": "g1_v2",
+      "generation": 2,
+      "genome": {
+        "max_ood_regression": 0.058542425001036215,
+        "max_cost_increase": 0.025972305674459392
+      },
+      "mutatedParams": [
+        "max_ood_regression",
+        "max_cost_increase"
+      ],
+      "mutationSummary": "perturbed [max_ood_regression, max_cost_increase]",
+      "createdAt": "2026-10-04T02:21:50.202Z"
+    },
+    "score": {
+      "variantId": "g2_v0",
+      "primary": 0.75,
+      "regressed": false,
+      "noopRate": 1,
+      "costPerWin": 0.03462974089927919,
+      "raw": {
+        "authority": "none",
+        "correct": 3,
+        "genome": {
+          "max_cost_increase": 0.025972305674459392,
+          "max_ood_regression": 0.058542425001036215
+        },
+        "total": 4,
+        "unsafe_promotions": 0
+      }
+    },
+    "children": []
+  },
+  {
+    "variant": {
+      "id": "g2_v1",
+      "parentId": "g1_v2",
+      "generation": 2,
+      "genome": {
+        "max_ood_regression": 0.05746601422135107,
+        "max_cost_increase": 0.1415980926422005
+      },
+      "mutatedParams": [
+        "max_ood_regression",
+        "max_cost_increase"
+      ],
+      "mutationSummary": "perturbed [max_ood_regression, max_cost_increase]",
+      "createdAt": "2026-10-04T02:21:50.202Z"
+    },
+    "score": {
+      "variantId": "g2_v1",
+      "primary": 1,
+      "regressed": false,
+      "noopRate": 0.75,
+      "costPerWin": 0.1415980926422005,
+      "raw": {
+        "authority": "none",
+        "correct": 4,
+        "genome": {
+          "max_cost_increase": 0.1415980926422005,
+          "max_ood_regression": 0.05746601422135107
+        },
+        "total": 4,
+        "unsafe_promotions": 0
+      }
+    },
+    "children": []
+  },
+  {
+    "variant": {
+      "id": "g2_v2",
+      "parentId": "g1_v2",
+      "generation": 2,
+      "genome": {
+        "max_ood_regression": 0.072563081162532,
+        "max_cost_increase": 0
+      },
+      "mutatedParams": [
+        "max_ood_regression",
+        "max_cost_increase"
+      ],
+      "mutationSummary": "perturbed [max_ood_regression, max_cost_increase]",
+      "createdAt": "2026-10-04T02:21:50.202Z"
+    },
+    "score": {
+      "variantId": "g2_v2",
+      "primary": 0.75,
+      "regressed": false,
+      "noopRate": 1,
+      "costPerWin": 0,
+      "raw": {
+        "authority": "none",
+        "correct": 3,
+        "genome": {
+          "max_cost_increase": 0,
+          "max_ood_regression": 0.072563081162532
+        },
+        "total": 4,
+        "unsafe_promotions": 0
+      }
+    },
+    "children": []
+  },
+  {
+    "variant": {
+      "id": "g2_v3",
+      "parentId": "g1_v2",
+      "generation": 2,
+      "genome": {
+        "max_ood_regression": 0.01407341668986527,
+        "max_cost_increase": 0.053599570976168506
+      },
+      "mutatedParams": [
+        "max_ood_regression",
+        "max_cost_increase"
+      ],
+      "mutationSummary": "perturbed [max_ood_regression, max_cost_increase]",
+      "createdAt": "2026-10-04T02:21:50.202Z"
+    },
+    "score": {
+      "variantId": "g2_v3",
+      "primary": 0.75,
+      "regressed": false,
+      "noopRate": 1,
+      "costPerWin": 0.07146609463489134,
+      "raw": {
+        "authority": "none",
+        "correct": 3,
+        "genome": {
+          "max_cost_increase": 0.053599570976168506,
+          "max_ood_regression": 0.01407341668986527
+        },
+        "total": 4,
+        "unsafe_promotions": 0
+      }
+    },
+    "children": []
+  }
+]

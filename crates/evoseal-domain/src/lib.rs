@@ -89,9 +89,15 @@ pub enum DomainError {
 pub fn validate_request(request: &PromotionRequest) -> Result<(), DomainError> {
     let slices = [
         ("incumbent.in_domain.score", &request.incumbent.in_domain),
-        ("incumbent.out_of_domain.score", &request.incumbent.out_of_domain),
+        (
+            "incumbent.out_of_domain.score",
+            &request.incumbent.out_of_domain,
+        ),
         ("candidate.in_domain.score", &request.candidate.in_domain),
-        ("candidate.out_of_domain.score", &request.candidate.out_of_domain),
+        (
+            "candidate.out_of_domain.score",
+            &request.candidate.out_of_domain,
+        ),
     ];
     for (field, slice) in slices {
         if !slice.score.is_finite() {
@@ -114,7 +120,10 @@ pub fn validate_request(request: &PromotionRequest) -> Result<(), DomainError> {
 }
 
 fn is_commit(value: &str) -> bool {
-    value.len() == 40 && value.bytes().all(|byte| byte.is_ascii_digit() || (b'a'..=b'f').contains(&byte))
+    value.len() == 40
+        && value
+            .bytes()
+            .all(|byte| byte.is_ascii_digit() || (b'a'..=b'f').contains(&byte))
 }
 
 #[must_use]
@@ -125,8 +134,7 @@ pub fn boundary_gate(request: &PromotionRequest, rrsi_admissible: bool) -> Bound
     }
     let incumbent = &request.incumbent;
     let candidate = &request.candidate;
-    if candidate.in_domain.score
-        < incumbent.in_domain.score - request.policy.score_floor_tolerance
+    if candidate.in_domain.score < incumbent.in_domain.score - request.policy.score_floor_tolerance
     {
         reasons.push("IN_DOMAIN_FLOOR_REGRESSION".to_owned());
     }
@@ -135,8 +143,8 @@ pub fn boundary_gate(request: &PromotionRequest, rrsi_admissible: bool) -> Bound
     {
         reasons.push("OUT_OF_DOMAIN_REGRESSION".to_owned());
     }
-    let relative_cost = (candidate.in_domain.cost - incumbent.in_domain.cost)
-        / incumbent.in_domain.cost;
+    let relative_cost =
+        (candidate.in_domain.cost - incumbent.in_domain.cost) / incumbent.in_domain.cost;
     if relative_cost > request.policy.max_cost_increase {
         reasons.push("COST_CEILING_EXCEEDED".to_owned());
     }
@@ -146,7 +154,11 @@ pub fn boundary_gate(request: &PromotionRequest, rrsi_admissible: bool) -> Bound
         reasons.push("NEW_SAFETY_FAILURE".to_owned());
     }
     BoundaryDecision {
-        status: if reasons.is_empty() { DecisionStatus::Promote } else { DecisionStatus::Hold },
+        status: if reasons.is_empty() {
+            DecisionStatus::Promote
+        } else {
+            DecisionStatus::Hold
+        },
         reasons,
     }
 }
@@ -160,15 +172,34 @@ mod tests {
             run_id: "run-1".into(),
             incumbent: IncumbentEvidence {
                 commit: "a".repeat(40),
-                in_domain: MetricSlice { score: 0.70, cost: 100.0, safety_failures: 0 },
-                out_of_domain: MetricSlice { score: 0.68, cost: 100.0, safety_failures: 0 },
+                in_domain: MetricSlice {
+                    score: 0.70,
+                    cost: 100.0,
+                    safety_failures: 0,
+                },
+                out_of_domain: MetricSlice {
+                    score: 0.68,
+                    cost: 100.0,
+                    safety_failures: 0,
+                },
             },
             candidate: CandidateEvidence {
                 candidate_id: "candidate-1".into(),
                 commit: "b".repeat(40),
-                in_domain: MetricSlice { score: 0.74, cost: 110.0, safety_failures: 0 },
-                out_of_domain: MetricSlice { score: 0.69, cost: 110.0, safety_failures: 0 },
-                edits: vec![ComponentEdit { component: "tool-policy".into(), hypothesis: "narrow tools".into() }],
+                in_domain: MetricSlice {
+                    score: 0.74,
+                    cost: 110.0,
+                    safety_failures: 0,
+                },
+                out_of_domain: MetricSlice {
+                    score: 0.69,
+                    cost: 110.0,
+                    safety_failures: 0,
+                },
+                edits: vec![ComponentEdit {
+                    component: "tool-policy".into(),
+                    hypothesis: "narrow tools".into(),
+                }],
             },
             policy: GatePolicy::default(),
         }
@@ -187,13 +218,21 @@ mod tests {
         req.candidate.out_of_domain.score = 0.50;
         let decision = boundary_gate(&req, true);
         assert_eq!(decision.status, DecisionStatus::Hold);
-        assert!(decision.reasons.contains(&"OUT_OF_DOMAIN_REGRESSION".to_owned()));
+        assert!(
+            decision
+                .reasons
+                .contains(&"OUT_OF_DOMAIN_REGRESSION".to_owned())
+        );
     }
 
     #[test]
     fn safety_regression_holds() {
         let mut req = request();
         req.candidate.in_domain.safety_failures = 1;
-        assert!(boundary_gate(&req, true).reasons.contains(&"NEW_SAFETY_FAILURE".to_owned()));
+        assert!(
+            boundary_gate(&req, true)
+                .reasons
+                .contains(&"NEW_SAFETY_FAILURE".to_owned())
+        );
     }
 }

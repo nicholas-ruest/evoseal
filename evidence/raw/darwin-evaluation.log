@@ -1,0 +1,17 @@
+
+Darwin Mode (numeric genome) — leaderboard
+  primary=1.0000  baseline  regressed=false  {max_ood_regression=0.02000 max_cost_increase=0.2500} ◀ winner
+  primary=1.0000  g1_v0  regressed=false  {max_ood_regression=0.04738 max_cost_increase=0.1969}
+  primary=1.0000  g1_v1  regressed=false  {max_ood_regression=0.03348 max_cost_increase=0.3184}
+  primary=1.0000  g1_v2  regressed=false  {max_ood_regression=0.04804 max_cost_increase=0.1456}
+  primary=1.0000  g1_v3  regressed=false  {max_ood_regression=0.04904 max_cost_increase=0.2510}
+  primary=1.0000  g2_v1  regressed=false  {max_ood_regression=0.05747 max_cost_increase=0.1416}
+  primary=0.7500  g2_v0  regressed=false  {max_ood_regression=0.05854 max_cost_increase=0.02597}
+  primary=0.7500  g2_v2  regressed=false  {max_ood_regression=0.07256 max_cost_increase=0.000}
+  primary=0.7500  g2_v3  regressed=false  {max_ood_regression=0.01407 max_cost_increase=0.05360}
+
+Winner: baseline
+Lineage: baseline
+Delta over baseline: +0.0000
+
+Artifacts: /home/ruv/.local/share/dream-machine/runs/2026-10-03-evoseal-v1/repo/.metaharness-numeric

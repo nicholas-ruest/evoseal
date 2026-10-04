@@ -1,0 +1,26 @@
+{
+  "dataset": "evaluation/frozen-cases.json",
+  "iterations": 10000,
+  "elapsed_ns": 9547085,
+  "strategies": [
+    {
+      "strategy": "score-only",
+      "correct": 1,
+      "total": 4,
+      "unsafe_promotions": 3
+    },
+    {
+      "strategy": "rrsi-only",
+      "correct": 2,
+      "total": 4,
+      "unsafe_promotions": 2
+    },
+    {
+      "strategy": "evoseal",
+      "correct": 4,
+      "total": 4,
+      "unsafe_promotions": 0
+    }
+  ],
+  "claim": "mechanism fixture only; not a production performance claim"
+}

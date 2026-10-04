@@ -27,13 +27,13 @@ struct Args {
 
 fn main() -> Result<()> {
     let args = Args::parse();
-    let input = fs::read(&args.input)
-        .with_context(|| format!("read {}", args.input.display()))?;
+    let input = fs::read(&args.input).with_context(|| format!("read {}", args.input.display()))?;
     let request: PromotionRequest = serde_json::from_slice(&input).context("parse input JSON")?;
     if let Some(parent) = args.ledger.parent() {
         fs::create_dir_all(parent).with_context(|| format!("create {}", parent.display()))?;
     }
-    let bridge = PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("../../integrations/rrsi_bridge.py");
+    let bridge =
+        PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("../../integrations/rrsi_bridge.py");
     let selector = PythonRrsiSelector::new(
         args.python,
         args.rrsi_source,
@@ -53,4 +53,3 @@ fn main() -> Result<()> {
     }
     Ok(())
 }
-

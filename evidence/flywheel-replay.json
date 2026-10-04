@@ -1,0 +1,297 @@
+{
+  "data_source": "FROZEN_LOCAL_FIXTURE",
+  "root_id": "root",
+  "chain": [
+    {
+      "id": "root",
+      "generation": 0,
+      "parents": [],
+      "mutation": null,
+      "primaryDelta": 0,
+      "anchorScore": 1,
+      "verdict": "ROOT",
+      "failureReasons": [],
+      "receipt": {
+        "payload": {
+          "kind": "root",
+          "root": "root"
+        },
+        "signature": "/ZmaxoGCY6gJciXjRSiQ7qWbFS7GHEZPwyRZsCof5TUt0FTjHP5F6tmYT7F+G1MtNQBumXaSkXBE16n7rQdWDw==",
+        "publicKey": "MCowBQYDK2VwAyEA+NzNXgVAWYj6dg3NsV1C6OsgFxfRWKEYFL4TNVpV+Yc=",
+        "alg": "ed25519"
+      },
+      "createdAt": "generation-0"
+    }
+  ],
+  "all_commits": [
+    {
+      "id": "root__max_ood_regression_gen1",
+      "generation": 1,
+      "parents": [
+        "root"
+      ],
+      "mutation": {
+        "target": "max_ood_regression",
+        "summary": "bounded deterministic max_ood_regression proposal"
+      },
+      "primaryDelta": 0,
+      "anchorScore": null,
+      "verdict": "REJECTED",
+      "failureReasons": [
+        "HUMAN_APPROVAL_REQUIRED",
+        "AUTHORITY_NONE"
+      ],
+      "receipt": {
+        "payload": {
+          "kind": "candidate",
+          "id": "root__max_ood_regression_gen1",
+          "target": "max_ood_regression",
+          "verdict": "REJECTED",
+          "primaryDelta": 0,
+          "baselineScore": {
+            "primary": 1,
+            "noopRate": 0.75,
+            "costPerWin": 0.5,
+            "regressed": false
+          },
+          "candidateScore": {
+            "primary": 1,
+            "noopRate": 0.75,
+            "costPerWin": 0.5,
+            "regressed": false
+          },
+          "anchorScore": null,
+          "failureReasons": [
+            "HUMAN_APPROVAL_REQUIRED",
+            "AUTHORITY_NONE"
+          ],
+          "parents": [
+            "root"
+          ],
+          "generation": 1
+        },
+        "signature": "UMSN0DWhiX3rFJos7JRYQTUH6GtOBY6KMbjId6Ejo+/kBjWwGPEar67Z+0ttsXuZ1Dn9ZpJiRLuFAMU+QtA+AQ==",
+        "publicKey": "MCowBQYDK2VwAyEA+NzNXgVAWYj6dg3NsV1C6OsgFxfRWKEYFL4TNVpV+Yc=",
+        "alg": "ed25519"
+      },
+      "createdAt": "generation-1",
+      "baselineScore": {
+        "primary": 1,
+        "noopRate": 0.75,
+        "costPerWin": 0.5,
+        "regressed": false
+      },
+      "candidateScore": {
+        "primary": 1,
+        "noopRate": 0.75,
+        "costPerWin": 0.5,
+        "regressed": false
+      }
+    },
+    {
+      "id": "root__max_cost_increase_gen1",
+      "generation": 1,
+      "parents": [
+        "root"
+      ],
+      "mutation": {
+        "target": "max_cost_increase",
+        "summary": "bounded deterministic max_cost_increase proposal"
+      },
+      "primaryDelta": 0,
+      "anchorScore": null,
+      "verdict": "REJECTED",
+      "failureReasons": [
+        "HUMAN_APPROVAL_REQUIRED",
+        "AUTHORITY_NONE"
+      ],
+      "receipt": {
+        "payload": {
+          "kind": "candidate",
+          "id": "root__max_cost_increase_gen1",
+          "target": "max_cost_increase",
+          "verdict": "REJECTED",
+          "primaryDelta": 0,
+          "baselineScore": {
+            "primary": 1,
+            "noopRate": 0.75,
+            "costPerWin": 0.5,
+            "regressed": false
+          },
+          "candidateScore": {
+            "primary": 1,
+            "noopRate": 0.75,
+            "costPerWin": 0.25,
+            "regressed": false
+          },
+          "anchorScore": null,
+          "failureReasons": [
+            "HUMAN_APPROVAL_REQUIRED",
+            "AUTHORITY_NONE"
+          ],
+          "parents": [
+            "root"
+          ],
+          "generation": 1
+        },
+        "signature": "uWbxTO+NlaKC8rCz4YjHCeD1Nl2XmODWhQbKaMvCVCVYfjSS++gk/BLGf9UsegX07glHw6ZlYYYZKIBQ6y5kDg==",
+        "publicKey": "MCowBQYDK2VwAyEA+NzNXgVAWYj6dg3NsV1C6OsgFxfRWKEYFL4TNVpV+Yc=",
+        "alg": "ed25519"
+      },
+      "createdAt": "generation-1",
+      "baselineScore": {
+        "primary": 1,
+        "noopRate": 0.75,
+        "costPerWin": 0.5,
+        "regressed": false
+      },
+      "candidateScore": {
+        "primary": 1,
+        "noopRate": 0.75,
+        "costPerWin": 0.25,
+        "regressed": false
+      }
+    },
+    {
+      "id": "root__max_ood_regression_gen2",
+      "generation": 2,
+      "parents": [
+        "root"
+      ],
+      "mutation": {
+        "target": "max_ood_regression",
+        "summary": "bounded deterministic max_ood_regression proposal"
+      },
+      "primaryDelta": 0,
+      "anchorScore": null,
+      "verdict": "REJECTED",
+      "failureReasons": [
+        "HUMAN_APPROVAL_REQUIRED",
+        "AUTHORITY_NONE"
+      ],
+      "receipt": {
+        "payload": {
+          "kind": "candidate",
+          "id": "root__max_ood_regression_gen2",
+          "target": "max_ood_regression",
+          "verdict": "REJECTED",
+          "primaryDelta": 0,
+          "baselineScore": {
+            "primary": 1,
+            "noopRate": 0.75,
+            "costPerWin": 0.5,
+            "regressed": false
+          },
+          "candidateScore": {
+            "primary": 1,
+            "noopRate": 0.75,
+            "costPerWin": 0.5,
+            "regressed": false
+          },
+          "anchorScore": null,
+          "failureReasons": [
+            "HUMAN_APPROVAL_REQUIRED",
+            "AUTHORITY_NONE"
+          ],
+          "parents": [
+            "root"
+          ],
+          "generation": 2
+        },
+        "signature": "UffPkwkIW0eRonavKqh6Zt+vWZAhSY/aqyfJTgsdUhyjg3yBIOkRGjw1HASeWoQSyK4zXGVMtZpwqO1co/U+Dw==",
+        "publicKey": "MCowBQYDK2VwAyEA+NzNXgVAWYj6dg3NsV1C6OsgFxfRWKEYFL4TNVpV+Yc=",
+        "alg": "ed25519"
+      },
+      "createdAt": "generation-2",
+      "baselineScore": {
+        "primary": 1,
+        "noopRate": 0.75,
+        "costPerWin": 0.5,
+        "regressed": false
+      },
+      "candidateScore": {
+        "primary": 1,
+        "noopRate": 0.75,
+        "costPerWin": 0.5,
+        "regressed": false
+      }
+    },
+    {
+      "id": "root__max_cost_increase_gen2",
+      "generation": 2,
+      "parents": [
+        "root"
+      ],
+      "mutation": {
+        "target": "max_cost_increase",
+        "summary": "bounded deterministic max_cost_increase proposal"
+      },
+      "primaryDelta": 0,
+      "anchorScore": null,
+      "verdict": "REJECTED",
+      "failureReasons": [
+        "HUMAN_APPROVAL_REQUIRED",
+        "AUTHORITY_NONE"
+      ],
+      "receipt": {
+        "payload": {
+          "kind": "candidate",
+          "id": "root__max_cost_increase_gen2",
+          "target": "max_cost_increase",
+          "verdict": "REJECTED",
+          "primaryDelta": 0,
+          "baselineScore": {
+            "primary": 1,
+            "noopRate": 0.75,
+            "costPerWin": 0.5,
+            "regressed": false
+          },
+          "candidateScore": {
+            "primary": 1,
+            "noopRate": 0.75,
+            "costPerWin": 0.25,
+            "regressed": false
+          },
+          "anchorScore": null,
+          "failureReasons": [
+            "HUMAN_APPROVAL_REQUIRED",
+            "AUTHORITY_NONE"
+          ],
+          "parents": [
+            "root"
+          ],
+          "generation": 2
+        },
+        "signature": "GTuS+y8mbkqMtWugRjefVH1LYtw1AH8euoI2iA6D2cfAgfIDxCD0uJsf6fJuqhdebX0gpmb2T2On0T2SAHIECw==",
+        "publicKey": "MCowBQYDK2VwAyEA+NzNXgVAWYj6dg3NsV1C6OsgFxfRWKEYFL4TNVpV+Yc=",
+        "alg": "ed25519"
+      },
+      "createdAt": "generation-2",
+      "baselineScore": {
+        "primary": 1,
+        "noopRate": 0.75,
+        "costPerWin": 0.5,
+        "regressed": false
+      },
+      "candidateScore": {
+        "primary": 1,
+        "noopRate": 0.75,
+        "costPerWin": 0.25,
+        "regressed": false
+      }
+    }
+  ],
+  "lift_curve": [
+    {
+      "generation": 0,
+      "primary": 1,
+      "delta": 0,
+      "anchor": 1
+    }
+  ],
+  "gate_fingerprint": "373480c5edfce772334878c451b2c08f85267bc6c6884cefc770be7b24edea9f",
+  "verified_improvements": 0,
+  "anchor_surviving_improvements": 0,
+  "milestone_reached": false,
+  "created_at": "generation-2"
+}

@@ -1,0 +1,414 @@
+warning[duplicate]: found 2 duplicate entries for crate 'anstream'
+  ┌─ /home/ruv/.local/share/dream-machine/runs/2026-10-03-evoseal-v1/repo/Cargo.lock:5:1
+  │  
+5 │ ╭ anstream 0.6.21 registry+https://github.com/rust-lang/crates.io-index
+6 │ │ anstream 1.0.0 registry+https://github.com/rust-lang/crates.io-index
+  │ ╰────────────────────────────────────────────────────────────────────┘ lock entries
+  │  
+  ├ anstream v0.6.21
+    └── clap_builder v4.5.48
+        └── clap v4.5.48
+            ├── evoseal-cli v0.1.0
+            └── evoseal-evaluation v0.1.0
+  ├ anstream v1.0.0
+    └── env_logger v0.11.11
+        ├── anndists v0.1.5
+        │   └── hnsw_rs v0.3.4
+        │       └── ruvector-core v2.3.1
+        │           └── evoseal-adapter-ruvnet v0.1.0
+        │               └── evoseal-cli v0.1.0
+        └── hnsw_rs v0.3.4 (*)
+
+warning[duplicate]: found 2 duplicate entries for crate 'anstyle-parse'
+  ┌─ /home/ruv/.local/share/dream-machine/runs/2026-10-03-evoseal-v1/repo/Cargo.lock:8:1
+  │  
+8 │ ╭ anstyle-parse 0.2.7 registry+https://github.com/rust-lang/crates.io-index
+9 │ │ anstyle-parse 1.0.0 registry+https://github.com/rust-lang/crates.io-index
+  │ ╰─────────────────────────────────────────────────────────────────────────┘ lock entries
+  │  
+  ├ anstyle-parse v0.2.7
+    └── anstream v0.6.21
+        └── clap_builder v4.5.48
+            └── clap v4.5.48
+                ├── evoseal-cli v0.1.0
+                └── evoseal-evaluation v0.1.0
+  ├ anstyle-parse v1.0.0
+    └── anstream v1.0.0
+        └── env_logger v0.11.11
+            ├── anndists v0.1.5
+            │   └── hnsw_rs v0.3.4
+            │       └── ruvector-core v2.3.1
+            │           └── evoseal-adapter-ruvnet v0.1.0
+            │               └── evoseal-cli v0.1.0
+            └── hnsw_rs v0.3.4 (*)
+
+warning[duplicate]: found 2 duplicate entries for crate 'bincode'
+   ┌─ /home/ruv/.local/share/dream-machine/runs/2026-10-03-evoseal-v1/repo/Cargo.lock:14:1
+   │  
+14 │ ╭ bincode 1.3.3 registry+https://github.com/rust-lang/crates.io-index
+15 │ │ bincode 2.0.1 registry+https://github.com/rust-lang/crates.io-index
+   │ ╰───────────────────────────────────────────────────────────────────┘ lock entries
+   │  
+   ├ bincode v1.3.3
+     └── hnsw_rs v0.3.4
+         └── ruvector-core v2.3.1
+             └── evoseal-adapter-ruvnet v0.1.0
+                 └── evoseal-cli v0.1.0
+   ├ bincode v2.0.1
+     └── ruvector-core v2.3.1
+         └── evoseal-adapter-ruvnet v0.1.0
+             └── evoseal-cli v0.1.0
+
+warning[license-not-encountered]: license was not encountered
+  ┌─ /home/ruv/.local/share/dream-machine/runs/2026-10-03-evoseal-v1/repo/deny.toml:7:63
+  │
+7 │ allow = ["Apache-2.0", "MIT", "Unicode-3.0", "BSD-3-Clause", "ISC", "Zlib", "MPL-2.0"]
+  │                                                               ━━━ unmatched license allowance
+
+warning[license-not-encountered]: license was not encountered
+  ┌─ /home/ruv/.local/share/dream-machine/runs/2026-10-03-evoseal-v1/repo/deny.toml:7:78
+  │
+7 │ allow = ["Apache-2.0", "MIT", "Unicode-3.0", "BSD-3-Clause", "ISC", "Zlib", "MPL-2.0"]
+  │                                                                              ━━━━━━━ unmatched license allowance
+
+warning[duplicate]: found 3 duplicate entries for crate 'getrandom'
+   ┌─ /home/ruv/.local/share/dream-machine/runs/2026-10-03-evoseal-v1/repo/Cargo.lock:67:1
+   │  
+67 │ ╭ getrandom 0.2.17 registry+https://github.com/rust-lang/crates.io-index
+68 │ │ getrandom 0.3.4 registry+https://github.com/rust-lang/crates.io-index
+69 │ │ getrandom 0.4.3 registry+https://github.com/rust-lang/crates.io-index
+   │ ╰─────────────────────────────────────────────────────────────────────┘ lock entries
+   │  
+   ├ getrandom v0.2.17
+     └── rand_core v0.6.4
+         ├── ed25519-dalek v2.2.0
+         │   └── rvf-crypto v0.2.0
+         │       └── evoseal-adapter-ruvnet v0.1.0
+         │           └── evoseal-cli v0.1.0
+         ├── rand v0.8.8
+         │   ├── rand_distr v0.4.3
+         │   │   └── ruvector-core v2.3.1
+         │   │       └── evoseal-adapter-ruvnet v0.1.0 (*)
+         │   └── ruvector-core v2.3.1 (*)
+         └── rand_chacha v0.3.1
+             └── rand v0.8.8 (*)
+   ├ getrandom v0.3.4
+     ├── rand_core v0.9.5
+     │   ├── rand v0.9.5
+     │   │   └── hnsw_rs v0.3.4
+     │   │       └── ruvector-core v2.3.1
+     │   │           └── evoseal-adapter-ruvnet v0.1.0
+     │   │               └── evoseal-cli v0.1.0
+     │   └── rand_chacha v0.9.0
+     │       └── rand v0.9.5 (*)
+     └── tempfile v3.23.0
+         ├── (dev) evoseal-adapter-rrsi v0.1.0
+         │   └── evoseal-cli v0.1.0 (*)
+         └── (dev) evoseal-adapter-ruvnet v0.1.0 (*)
+   ├ getrandom v0.4.3
+     └── uuid v1.27.0
+         └── ruvector-core v2.3.1
+             └── evoseal-adapter-ruvnet v0.1.0
+                 └── evoseal-cli v0.1.0
+
+warning[duplicate]: found 3 duplicate entries for crate 'hashbrown'
+   ┌─ /home/ruv/.local/share/dream-machine/runs/2026-10-03-evoseal-v1/repo/Cargo.lock:70:1
+   │  
+70 │ ╭ hashbrown 0.14.5 registry+https://github.com/rust-lang/crates.io-index
+71 │ │ hashbrown 0.15.5 registry+https://github.com/rust-lang/crates.io-index
+72 │ │ hashbrown 0.17.1 registry+https://github.com/rust-lang/crates.io-index
+   │ ╰──────────────────────────────────────────────────────────────────────┘ lock entries
+   │  
+   ├ hashbrown v0.14.5
+     └── dashmap v6.2.1
+         └── ruvector-core v2.3.1
+             └── evoseal-adapter-ruvnet v0.1.0
+                 └── evoseal-cli v0.1.0
+   ├ hashbrown v0.15.5
+     └── hnsw_rs v0.3.4
+         └── ruvector-core v2.3.1
+             └── evoseal-adapter-ruvnet v0.1.0
+                 └── evoseal-cli v0.1.0
+   ├ hashbrown v0.17.1
+     ├── indexmap v2.14.2
+     │   └── hnsw_rs v0.3.4
+     │       └── ruvector-core v2.3.1
+     │           └── evoseal-adapter-ruvnet v0.1.0
+     │               └── evoseal-cli v0.1.0
+     └── rkyv v0.8.18
+         └── ruvector-core v2.3.1 (*)
+
+warning[duplicate]: found 2 duplicate entries for crate 'r-efi'
+    ┌─ /home/ruv/.local/share/dream-machine/runs/2026-10-03-evoseal-v1/repo/Cargo.lock:117:1
+    │  
+117 │ ╭ r-efi 5.3.0 registry+https://github.com/rust-lang/crates.io-index
+118 │ │ r-efi 6.0.0 registry+https://github.com/rust-lang/crates.io-index
+    │ ╰─────────────────────────────────────────────────────────────────┘ lock entries
+    │  
+    ├ r-efi v5.3.0
+      └── getrandom v0.3.4
+          ├── rand_core v0.9.5
+          │   ├── rand v0.9.5
+          │   │   └── hnsw_rs v0.3.4
+          │   │       └── ruvector-core v2.3.1
+          │   │           └── evoseal-adapter-ruvnet v0.1.0
+          │   │               └── evoseal-cli v0.1.0
+          │   └── rand_chacha v0.9.0
+          │       └── rand v0.9.5 (*)
+          └── tempfile v3.23.0
+              ├── (dev) evoseal-adapter-rrsi v0.1.0
+              │   └── evoseal-cli v0.1.0 (*)
+              └── (dev) evoseal-adapter-ruvnet v0.1.0 (*)
+    ├ r-efi v6.0.0
+      └── getrandom v0.4.3
+          └── uuid v1.27.0
+              └── ruvector-core v2.3.1
+                  └── evoseal-adapter-ruvnet v0.1.0
+                      └── evoseal-cli v0.1.0
+
+warning[duplicate]: found 2 duplicate entries for crate 'rand'
+    ┌─ /home/ruv/.local/share/dream-machine/runs/2026-10-03-evoseal-v1/repo/Cargo.lock:120:1
+    │  
+120 │ ╭ rand 0.8.8 registry+https://github.com/rust-lang/crates.io-index
+121 │ │ rand 0.9.5 registry+https://github.com/rust-lang/crates.io-index
+    │ ╰────────────────────────────────────────────────────────────────┘ lock entries
+    │  
+    ├ rand v0.8.8
+      ├── rand_distr v0.4.3
+      │   └── ruvector-core v2.3.1
+      │       └── evoseal-adapter-ruvnet v0.1.0
+      │           └── evoseal-cli v0.1.0
+      └── ruvector-core v2.3.1 (*)
+    ├ rand v0.9.5
+      └── hnsw_rs v0.3.4
+          └── ruvector-core v2.3.1
+              └── evoseal-adapter-ruvnet v0.1.0
+                  └── evoseal-cli v0.1.0
+
+warning[duplicate]: found 2 duplicate entries for crate 'rand_chacha'
+    ┌─ /home/ruv/.local/share/dream-machine/runs/2026-10-03-evoseal-v1/repo/Cargo.lock:122:1
+    │  
+122 │ ╭ rand_chacha 0.3.1 registry+https://github.com/rust-lang/crates.io-index
+123 │ │ rand_chacha 0.9.0 registry+https://github.com/rust-lang/crates.io-index
+    │ ╰───────────────────────────────────────────────────────────────────────┘ lock entries
+    │  
+    ├ rand_chacha v0.3.1
+      └── rand v0.8.8
+          ├── rand_distr v0.4.3
+          │   └── ruvector-core v2.3.1
+          │       └── evoseal-adapter-ruvnet v0.1.0
+          │           └── evoseal-cli v0.1.0
+          └── ruvector-core v2.3.1 (*)
+    ├ rand_chacha v0.9.0
+      └── rand v0.9.5
+          └── hnsw_rs v0.3.4
+              └── ruvector-core v2.3.1
+                  └── evoseal-adapter-ruvnet v0.1.0
+                      └── evoseal-cli v0.1.0
+
+warning[duplicate]: found 2 duplicate entries for crate 'rand_core'
+    ┌─ /home/ruv/.local/share/dream-machine/runs/2026-10-03-evoseal-v1/repo/Cargo.lock:124:1
+    │  
+124 │ ╭ rand_core 0.6.4 registry+https://github.com/rust-lang/crates.io-index
+125 │ │ rand_core 0.9.5 registry+https://github.com/rust-lang/crates.io-index
+    │ ╰─────────────────────────────────────────────────────────────────────┘ lock entries
+    │  
+    ├ rand_core v0.6.4
+      ├── ed25519-dalek v2.2.0
+      │   └── rvf-crypto v0.2.0
+      │       └── evoseal-adapter-ruvnet v0.1.0
+      │           └── evoseal-cli v0.1.0
+      ├── rand v0.8.8
+      │   ├── rand_distr v0.4.3
+      │   │   └── ruvector-core v2.3.1
+      │   │       └── evoseal-adapter-ruvnet v0.1.0 (*)
+      │   └── ruvector-core v2.3.1 (*)
+      └── rand_chacha v0.3.1
+          └── rand v0.8.8 (*)
+    ├ rand_core v0.9.5
+      ├── rand v0.9.5
+      │   └── hnsw_rs v0.3.4
+      │       └── ruvector-core v2.3.1
+      │           └── evoseal-adapter-ruvnet v0.1.0
+      │               └── evoseal-cli v0.1.0
+      └── rand_chacha v0.9.0
+          └── rand v0.9.5 (*)
+
+warning[duplicate]: found 2 duplicate entries for crate 'syn'
+    ┌─ /home/ruv/.local/share/dream-machine/runs/2026-10-03-evoseal-v1/repo/Cargo.lock:162:1
+    │  
+162 │ ╭ syn 2.0.119 registry+https://github.com/rust-lang/crates.io-index
+163 │ │ syn 3.0.6 registry+https://github.com/rust-lang/crates.io-index
+    │ ╰───────────────────────────────────────────────────────────────┘ lock entries
+    │  
+    ├ syn v2.0.119
+      ├── clap_derive v4.5.47
+      │   └── clap v4.5.48
+      │       ├── evoseal-cli v0.1.0
+      │       └── evoseal-evaluation v0.1.0
+      ├── curve25519-dalek-derive v0.1.1
+      │   └── curve25519-dalek v4.1.3
+      │       └── ed25519-dalek v2.2.0
+      │           └── rvf-crypto v0.2.0
+      │               └── evoseal-adapter-ruvnet v0.1.0
+      │                   └── evoseal-cli v0.1.0 (*)
+      ├── enum-as-inner v0.6.1
+      │   └── sysctl v0.6.0
+      │       └── mmap-rs v0.7.0
+      │           └── hnsw_rs v0.3.4
+      │               └── ruvector-core v2.3.1
+      │                   └── evoseal-adapter-ruvnet v0.1.0 (*)
+      ├── munge_macro v0.4.7
+      │   └── munge v0.4.7
+      │       └── rkyv v0.8.18
+      │           └── ruvector-core v2.3.1 (*)
+      ├── serde_derive v1.0.228
+      │   └── serde v1.0.228
+      │       ├── bincode v1.3.3
+      │       │   └── hnsw_rs v0.3.4 (*)
+      │       ├── bincode v2.0.1
+      │       │   └── ruvector-core v2.3.1 (*)
+      │       ├── chrono v0.4.45
+      │       │   └── ruvector-core v2.3.1 (*)
+      │       ├── evoseal-application v0.1.0
+      │       │   ├── evoseal-adapter-rrsi v0.1.0
+      │       │   │   └── evoseal-cli v0.1.0 (*)
+      │       │   ├── evoseal-adapter-ruvnet v0.1.0 (*)
+      │       │   └── evoseal-cli v0.1.0 (*)
+      │       ├── evoseal-domain v0.1.0
+      │       │   ├── evoseal-adapter-rrsi v0.1.0 (*)
+      │       │   ├── evoseal-adapter-ruvnet v0.1.0 (*)
+      │       │   ├── evoseal-application v0.1.0 (*)
+      │       │   ├── evoseal-cli v0.1.0 (*)
+      │       │   └── evoseal-evaluation v0.1.0 (*)
+      │       ├── evoseal-evaluation v0.1.0 (*)
+      │       ├── hnsw_rs v0.3.4 (*)
+      │       ├── ndarray v0.16.1
+      │       │   └── ruvector-core v2.3.1 (*)
+      │       ├── ruvector-core v2.3.1 (*)
+      │       └── ruvector-turboquant v2.3.0
+      │           └── ruvector-core v2.3.1 (*)
+      ├── thiserror-impl v1.0.69
+      │   └── thiserror v1.0.69
+      │       └── sysctl v0.6.0 (*)
+      ├── thiserror-impl v2.0.17
+      │   └── thiserror v2.0.17
+      │       ├── evoseal-application v0.1.0 (*)
+      │       ├── evoseal-domain v0.1.0 (*)
+      │       ├── mmap-rs v0.7.0 (*)
+      │       ├── ruvector-core v2.3.1 (*)
+      │       └── ruvector-turboquant v2.3.0 (*)
+      ├── tracing-attributes v0.1.31
+      │   └── tracing v0.1.44
+      │       └── ruvector-core v2.3.1 (*)
+      ├── windows-implement v0.60.2
+      │   └── windows-core v0.62.2
+      │       └── iana-time-zone v0.1.65
+      │           └── chrono v0.4.45 (*)
+      └── windows-interface v0.59.3
+          └── windows-core v0.62.2 (*)
+    ├ syn v3.0.6
+      ├── bytecheck_derive v0.8.3
+      │   └── bytecheck v0.8.3
+      │       ├── rend v0.5.4
+      │       │   └── rkyv v0.8.18
+      │       │       └── ruvector-core v2.3.1
+      │       │           └── evoseal-adapter-ruvnet v0.1.0
+      │       │               └── evoseal-cli v0.1.0
+      │       └── rkyv v0.8.18 (*)
+      ├── ptr_meta_derive v0.3.2
+      │   └── ptr_meta v0.3.2
+      │       ├── bytecheck v0.8.3 (*)
+      │       ├── rancor v0.1.3
+      │       │   ├── bytecheck v0.8.3 (*)
+      │       │   └── rkyv v0.8.18 (*)
+      │       └── rkyv v0.8.18 (*)
+      ├── rkyv_derive v0.8.18
+      │   └── rkyv v0.8.18 (*)
+      └── wasm-bindgen-macro-support v0.2.129
+          └── wasm-bindgen-macro v0.2.129
+              └── wasm-bindgen v0.2.129
+                  ├── chrono v0.4.45
+                  │   └── ruvector-core v2.3.1 (*)
+                  ├── iana-time-zone v0.1.65
+                  │   └── chrono v0.4.45 (*)
+                  ├── js-sys v0.3.106
+                  │   ├── chrono v0.4.45 (*)
+                  │   ├── iana-time-zone v0.1.65 (*)
+                  │   └── uuid v1.27.0
+                  │       └── ruvector-core v2.3.1 (*)
+                  └── uuid v1.27.0 (*)
+
+warning[duplicate]: found 2 duplicate entries for crate 'thiserror'
+    ┌─ /home/ruv/.local/share/dream-machine/runs/2026-10-03-evoseal-v1/repo/Cargo.lock:166:1
+    │  
+166 │ ╭ thiserror 1.0.69 registry+https://github.com/rust-lang/crates.io-index
+167 │ │ thiserror 2.0.17 registry+https://github.com/rust-lang/crates.io-index
+    │ ╰──────────────────────────────────────────────────────────────────────┘ lock entries
+    │  
+    ├ thiserror v1.0.69
+      └── sysctl v0.6.0
+          └── mmap-rs v0.7.0
+              └── hnsw_rs v0.3.4
+                  └── ruvector-core v2.3.1
+                      └── evoseal-adapter-ruvnet v0.1.0
+                          └── evoseal-cli v0.1.0
+    ├ thiserror v2.0.17
+      ├── evoseal-application v0.1.0
+      │   ├── evoseal-adapter-rrsi v0.1.0
+      │   │   └── evoseal-cli v0.1.0
+      │   ├── evoseal-adapter-ruvnet v0.1.0
+      │   │   └── evoseal-cli v0.1.0 (*)
+      │   └── evoseal-cli v0.1.0 (*)
+      ├── evoseal-domain v0.1.0
+      │   ├── evoseal-adapter-rrsi v0.1.0 (*)
+      │   ├── evoseal-adapter-ruvnet v0.1.0 (*)
+      │   ├── evoseal-application v0.1.0 (*)
+      │   ├── evoseal-cli v0.1.0 (*)
+      │   └── evoseal-evaluation v0.1.0
+      ├── mmap-rs v0.7.0
+      │   └── hnsw_rs v0.3.4
+      │       └── ruvector-core v2.3.1
+      │           └── evoseal-adapter-ruvnet v0.1.0 (*)
+      ├── ruvector-core v2.3.1 (*)
+      └── ruvector-turboquant v2.3.0
+          └── ruvector-core v2.3.1 (*)
+
+warning[duplicate]: found 2 duplicate entries for crate 'thiserror-impl'
+    ┌─ /home/ruv/.local/share/dream-machine/runs/2026-10-03-evoseal-v1/repo/Cargo.lock:168:1
+    │  
+168 │ ╭ thiserror-impl 1.0.69 registry+https://github.com/rust-lang/crates.io-index
+169 │ │ thiserror-impl 2.0.17 registry+https://github.com/rust-lang/crates.io-index
+    │ ╰───────────────────────────────────────────────────────────────────────────┘ lock entries
+    │  
+    ├ thiserror-impl v1.0.69
+      └── thiserror v1.0.69
+          └── sysctl v0.6.0
+              └── mmap-rs v0.7.0
+                  └── hnsw_rs v0.3.4
+                      └── ruvector-core v2.3.1
+                          └── evoseal-adapter-ruvnet v0.1.0
+                              └── evoseal-cli v0.1.0
+    ├ thiserror-impl v2.0.17
+      └── thiserror v2.0.17
+          ├── evoseal-application v0.1.0
+          │   ├── evoseal-adapter-rrsi v0.1.0
+          │   │   └── evoseal-cli v0.1.0
+          │   ├── evoseal-adapter-ruvnet v0.1.0
+          │   │   └── evoseal-cli v0.1.0 (*)
+          │   └── evoseal-cli v0.1.0 (*)
+          ├── evoseal-domain v0.1.0
+          │   ├── evoseal-adapter-rrsi v0.1.0 (*)
+          │   ├── evoseal-adapter-ruvnet v0.1.0 (*)
+          │   ├── evoseal-application v0.1.0 (*)
+          │   ├── evoseal-cli v0.1.0 (*)
+          │   └── evoseal-evaluation v0.1.0
+          ├── mmap-rs v0.7.0
+          │   └── hnsw_rs v0.3.4
+          │       └── ruvector-core v2.3.1
+          │           └── evoseal-adapter-ruvnet v0.1.0 (*)
+          ├── ruvector-core v2.3.1 (*)
+          └── ruvector-turboquant v2.3.0
+              └── ruvector-core v2.3.1 (*)
+
+advisories ok, bans ok, licenses ok, sources ok

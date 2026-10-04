@@ -64,4 +64,4 @@ const output = {
 };
 writeFileSync(resolve(repo, "evidence/flywheel-replay.json"), `${JSON.stringify(result.replayBundle, null, 2)}\n`);
 process.stdout.write(`${JSON.stringify(output, null, 2)}\n`);
-if (!verdict.pass || result.promotions.length !== 1) process.exitCode = 1;
+if (!verdict.pass || result.promotions.length !== 0) process.exitCode = 1;

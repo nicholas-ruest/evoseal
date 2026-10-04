@@ -1,0 +1,10 @@
+   Compiling bitflags v2.13.2
+   Compiling nix v0.30.1
+   Compiling sysctl v0.6.0
+   Compiling mmap-rs v0.7.0
+   Compiling hnsw_rs v0.3.4
+   Compiling ruvector-core v2.3.1
+   Compiling evoseal-adapter-ruvnet v0.1.0 (/home/ruv/.local/share/dream-machine/runs/2026-10-03-evoseal-v1/repo/crates/evoseal-adapter-ruvnet)
+   Compiling evoseal-cli v0.1.0 (/home/ruv/.local/share/dream-machine/runs/2026-10-03-evoseal-v1/repo/crates/evoseal-cli)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 13.40s
+     Running `target/debug/evoseal --input examples/promotion-request.json --output evidence/cli-report.json --ledger evidence/runtime/ruvector.redb`

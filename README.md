@@ -101,18 +101,20 @@ cargo clippy --workspace --all-targets --all-features --locked -- -D warnings
 cargo test --workspace --all-targets --all-features --locked
 RRSI_SOURCE=/tmp/rrsi cargo test -p evoseal-adapter-rrsi --test upstream -- --ignored
 cargo deny check
-cargo run -p evoseal-evaluation --release -- --dataset evaluation/frozen-cases.json --iterations 10000
+cargo run --locked -p evoseal-evaluation --bin evoseal-eval -- --dataset evaluation/frozen-cases.json --iterations 10000
 ```
 
 ## Frozen benchmark
 
 The dataset compares `score-only`, `rrsi-only`, and the combined gate. It is a mechanism fixture, not a production claim. Raw dated evidence is under `evidence/`; the benchmark table is updated only from executed output.
 
-| Strategy | Purpose |
-|---|---|
-| score-only | demonstrates why improvement on one slice is insufficient |
-| RRSI-only | preserves upstream selection semantics without EvoSeal boundary gates |
-| EvoSeal | requires RRSI admissibility plus frozen OOD/cost/safety gates |
+| Strategy | Correct | Unsafe promotions | Purpose |
+|---|---:|---:|---|
+| score-only | 1/4 | 3 | demonstrates why improvement on one slice is insufficient |
+| RRSI-only | 2/4 | 2 | preserves upstream selection semantics without EvoSeal boundary gates |
+| EvoSeal | **4/4** | **0** | requires RRSI admissibility plus frozen OOD/cost/safety gates |
+
+On the same frozen fixture, 10,000 combined-gate evaluations completed in 9,547,085 ns in the recorded debug build. This is a reproducibility timing, not a throughput claim. Darwin 0.10.3 evaluated the two gate parameters over two generations and retained the frozen baseline at 1.0 fixture accuracy. Flywheel 0.1.12 ran two authority-free generations, made zero promotions, and replay-verified every receipt and sealed field. See `evidence/` for raw output.
 
 ## Limitations
 
@@ -123,4 +125,3 @@ The dataset compares `score-only`, `rrsi-only`, and the combined gate. It is a m
 - EvoSeal can recommend `PROMOTE`, but a human-owned release gate must decide KEEP/GRADUATE, REVISE, or DISCARD.
 
 See [specification](docs/specification.md), [architecture](docs/architecture.md), [DDD](docs/ddd.md), [implementation contract](docs/implementation-contract.md), [research](docs/research.md), and [status](PROJECT_STATUS.md).
-

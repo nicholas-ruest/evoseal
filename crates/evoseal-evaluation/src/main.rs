@@ -23,7 +23,8 @@ struct EvaluationReport {
 
 fn main() -> Result<()> {
     let args = Args::parse();
-    let bytes = fs::read(&args.dataset).with_context(|| format!("read {}", args.dataset.display()))?;
+    let bytes =
+        fs::read(&args.dataset).with_context(|| format!("read {}", args.dataset.display()))?;
     let cases: Vec<FrozenCase> = serde_json::from_slice(&bytes).context("parse frozen dataset")?;
     let start = Instant::now();
     for _ in 0..args.iterations {
@@ -33,10 +34,12 @@ fn main() -> Result<()> {
         dataset: args.dataset.display().to_string(),
         iterations: args.iterations,
         elapsed_ns: start.elapsed().as_nanos(),
-        strategies: ["score-only", "rrsi-only", "evoseal"].iter().map(|name| score(&cases, name)).collect(),
+        strategies: ["score-only", "rrsi-only", "evoseal"]
+            .iter()
+            .map(|name| score(&cases, name))
+            .collect(),
         claim: "mechanism fixture only; not a production performance claim",
     };
     println!("{}", serde_json::to_string_pretty(&report)?);
     Ok(())
 }
-

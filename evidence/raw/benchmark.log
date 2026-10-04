@@ -1,0 +1,2 @@
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.05s
+     Running `target/debug/evoseal-eval --dataset evaluation/frozen-cases.json --iterations 10000`

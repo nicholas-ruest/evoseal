@@ -3,7 +3,10 @@ use evoseal_domain::DecisionStatus;
 use evoseal_evaluation::{FrozenCase, score};
 use serde::{Deserialize, Serialize};
 use serde_json::Value;
-use std::{env, fs, io::{self, Read}};
+use std::{
+    env, fs,
+    io::{self, Read},
+};
 
 #[derive(Debug, Deserialize)]
 struct DarwinInput {
@@ -33,7 +36,9 @@ fn parameter(genome: &Value, name: &str) -> Result<f64> {
 }
 
 fn main() -> Result<()> {
-    let dataset = env::args().nth(1).context("dataset path argument required")?;
+    let dataset = env::args()
+        .nth(1)
+        .context("dataset path argument required")?;
     let cases: Vec<FrozenCase> =
         serde_json::from_slice(&fs::read(&dataset).with_context(|| format!("read {dataset}"))?)?;
     if cases.is_empty() {
